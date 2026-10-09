@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build, pruebas y lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Verificar que no haya claves de API
+        run: |
+          if grep -RInE "sk-ant-[A-Za-z0-9_-]{10,}|AIza[0-9A-Za-z_-]{30,}" --exclude-dir=.git --exclude-dir=build . ; then
+            echo "Se encontró algo parecido a una clave de API"; exit 1
+          fi
+
+      - name: Compilar (debug) y pruebas unitarias
+        run: ./gradlew assembleDebug testDebugUnitTest --stacktrace --continue
+
+      - name: Análisis estático (detekt + ktlint)
+        run: ./gradlew detekt ktlintCheck --continue
+
+      - name: Lint de Android
+        run: ./gradlew lintDebug --continue
+
+      - name: Build release (R8)
+        run: ./gradlew assembleRelease
+
+      - name: Reportes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reportes
+          path: |
+            **/build/reports/
+            **/build/test-results/
+          retention-days: 7

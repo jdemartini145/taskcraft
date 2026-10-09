@@ -1,0 +1,8 @@
+sano
+pudricion_raiz
+algas
+tip_burn
+deficiencia_ca
+deficiencia_fe
+deficiencia_mg
+quemadura_sales

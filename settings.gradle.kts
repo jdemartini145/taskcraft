@@ -18,7 +18,6 @@ dependencyResolutionManagement {
 rootProject.name = "APhid"
 
 include(":app")
-include(":baselineprofile")
 include(
     ":core:model",
     ":core:formula-engine",
@@ -32,12 +31,4 @@ include(
 include(
     ":feature:systems",
     ":feature:formula",
-    ":feature:log",
-    ":feature:diagnosis",
-    ":feature:alerts",
-    ":feature:crops",
-    ":feature:pests",
-    ":feature:shopping",
-    ":feature:settings",
-    ":feature:sensors",
 )

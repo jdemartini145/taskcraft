@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_label">APhid: last reading</string>
+    <string name="widget_description">Last pH/EC reading and next task</string>
+</resources>

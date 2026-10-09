@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Gota de agua con hoja (APhid). Zona segura: círculo central de 66dp. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M54,28c-11,9.4 -16.5,17.5 -16.5,24.4c0,10.3 7.8,16.9 16.5,16.9s16.5,-6.6 16.5,-16.9C70.5,45.5 65,37.4 54,28z" />
+    <path
+        android:fillColor="#FF006A60"
+        android:pathData="M47,60c2,-7 8,-11 15,-12c-1,7 -6,12 -13,13l-2,4l-2,-1z" />
+    <path
+        android:fillColor="#FF74F8E5"
+        android:pathData="M54,76h2v6h-2z" />
+</vector>
