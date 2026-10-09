@@ -1,0 +1,25 @@
+name: Probe versions
+on:
+  workflow_dispatch:
+  push:
+    paths: [".github/workflows/probe-versions.yml"]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Latest stable versions from Google Maven
+        run: |
+          G=https://dl.google.com/dl/android/maven2
+          for p in com/android/tools/build/gradle androidx/compose/compose-bom androidx/room/room-runtime \
+            androidx/navigation/navigation-compose androidx/hilt/hilt-navigation-compose androidx/hilt/hilt-work androidx/hilt/hilt-compiler \
+            androidx/work/work-runtime-ktx androidx/datastore/datastore-preferences androidx/glance/glance-appwidget \
+            androidx/glance/glance-material3 androidx/activity/activity-compose androidx/lifecycle/lifecycle-runtime-compose \
+            androidx/core/core-ktx androidx/core/core-splashscreen androidx/camera/camera-camera2 com/google/ai/edge/litert/litert \
+            com/google/mlkit/genai-prompt androidx/compose/material3/adaptive/adaptive androidx/profileinstaller/profileinstaller \
+            com/android/billingclient/billing-ktx androidx/benchmark/benchmark-macro-junit4 androidx/baselineprofile/androidx.baselineprofile.gradle.plugin \
+            androidx/compose/material3/material3 androidx/test/ext/junit androidx/test/runner androidx/test/uiautomator/uiautomator \
+            androidx/compose/ui/ui-test-junit4 androidx/lifecycle/lifecycle-viewmodel-compose androidx/room/room-testing \
+            androidx/navigation/navigation-testing androidx/security/security-crypto com/android/tools/desugar_jdk_libs; do
+            echo "$p: $(curl -s $G/$p/maven-metadata.xml | grep -oE '<version>[^<]+' | sed 's/<version>//' | tail -8 | tr '\n' ' ')"
+          done
+          echo "ANDROID_HOME=$ANDROID_HOME"; ls $ANDROID_HOME/platforms $ANDROID_HOME/build-tools || true
