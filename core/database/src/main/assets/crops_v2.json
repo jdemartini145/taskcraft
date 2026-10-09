@@ -1,0 +1,1619 @@
+{
+ "version": 2,
+ "crops": [
+  {
+   "id": "fresa",
+   "commonName": "Fresa",
+   "scientificName": "Fragaria × ananassa",
+   "family": "Rosaceae",
+   "daysPerStage": {
+    "PLANTULA": null,
+    "VEGETATIVA": null,
+    "FLORACION": null,
+    "FRUCTIFICACION": null
+   }
+  },
+  {
+   "id": "palta",
+   "commonName": "Palta",
+   "scientificName": "Persea americana",
+   "family": "Lauraceae",
+   "daysPerStage": {
+    "PLANTULA": null,
+    "VEGETATIVA": null,
+    "FLORACION": null,
+    "FRUCTIFICACION": null
+   }
+  },
+  {
+   "id": "manzana",
+   "commonName": "Manzana",
+   "scientificName": "Malus domestica",
+   "family": "Rosaceae",
+   "daysPerStage": {
+    "PLANTULA": null,
+    "VEGETATIVA": null,
+    "FLORACION": null,
+    "FRUCTIFICACION": null
+   }
+  },
+  {
+   "id": "lechuga",
+   "commonName": "Lechuga",
+   "scientificName": "Lactuca sativa",
+   "family": "Asteraceae",
+   "daysPerStage": {
+    "PLANTULA": null,
+    "VEGETATIVA": null,
+    "FLORACION": null,
+    "FRUCTIFICACION": null
+   }
+  },
+  {
+   "id": "albahaca",
+   "commonName": "Albahaca",
+   "scientificName": "Ocimum basilicum",
+   "family": "Lamiaceae",
+   "daysPerStage": {
+    "PLANTULA": null,
+    "VEGETATIVA": null,
+    "FLORACION": null,
+    "FRUCTIFICACION": null
+   }
+  },
+  {
+   "id": "brocoli",
+   "commonName": "Brócoli",
+   "scientificName": "Brassica oleracea var. italica",
+   "family": "Brassicaceae",
+   "daysPerStage": {
+    "PLANTULA": null,
+    "VEGETATIVA": null,
+    "FLORACION": null,
+    "FRUCTIFICACION": null
+   }
+  },
+  {
+   "id": "tomate",
+   "commonName": "Tomate",
+   "scientificName": "Solanum lycopersicum",
+   "family": "Solanaceae",
+   "daysPerStage": {
+    "PLANTULA": null,
+    "VEGETATIVA": null,
+    "FLORACION": null,
+    "FRUCTIFICACION": null
+   }
+  },
+  {
+   "id": "frijol",
+   "commonName": "Frijol",
+   "scientificName": "Phaseolus vulgaris",
+   "family": "Fabaceae",
+   "daysPerStage": {
+    "PLANTULA": null,
+    "VEGETATIVA": null,
+    "FLORACION": null,
+    "FRUCTIFICACION": null
+   }
+  },
+  {
+   "id": "perejil",
+   "commonName": "Perejil",
+   "scientificName": "Petroselinum crispum",
+   "family": "Apiaceae",
+   "daysPerStage": {
+    "PLANTULA": null,
+    "VEGETATIVA": null,
+    "FLORACION": null,
+    "FRUCTIFICACION": null
+   }
+  },
+  {
+   "id": "culantro",
+   "commonName": "Culantro",
+   "scientificName": "Coriandrum sativum",
+   "family": "Apiaceae",
+   "daysPerStage": {
+    "PLANTULA": null,
+    "VEGETATIVA": null,
+    "FLORACION": null,
+    "FRUCTIFICACION": null
+   }
+  },
+  {
+   "id": "rabanito",
+   "commonName": "Rabanito",
+   "scientificName": "Raphanus sativus",
+   "family": "Brassicaceae",
+   "daysPerStage": {
+    "PLANTULA": null,
+    "VEGETATIVA": null,
+    "FLORACION": null,
+    "FRUCTIFICACION": null
+   }
+  },
+  {
+   "id": "aji",
+   "commonName": "Ají",
+   "scientificName": "Capsicum baccatum",
+   "family": "Solanaceae",
+   "daysPerStage": {
+    "PLANTULA": null,
+    "VEGETATIVA": null,
+    "FLORACION": null,
+    "FRUCTIFICACION": null
+   }
+  },
+  {
+   "id": "pimiento",
+   "commonName": "Pimiento",
+   "scientificName": "Capsicum annuum",
+   "family": "Solanaceae",
+   "daysPerStage": {
+    "PLANTULA": null,
+    "VEGETATIVA": null,
+    "FLORACION": null,
+    "FRUCTIFICACION": null
+   }
+  },
+  {
+   "id": "espinaca",
+   "commonName": "Espinaca",
+   "scientificName": "Spinacia oleracea",
+   "family": "Amaranthaceae",
+   "daysPerStage": {
+    "PLANTULA": null,
+    "VEGETATIVA": null,
+    "FLORACION": null,
+    "FRUCTIFICACION": null
+   }
+  },
+  {
+   "id": "cebolla_china",
+   "commonName": "Cebolla china",
+   "scientificName": "Allium fistulosum",
+   "family": "Amaryllidaceae",
+   "daysPerStage": {
+    "PLANTULA": null,
+    "VEGETATIVA": null,
+    "FLORACION": null,
+    "FRUCTIFICACION": null
+   }
+  }
+ ],
+ "stageTargets": [
+  {
+   "cropId": "fresa",
+   "stage": "PLANTULA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "fresa",
+   "stage": "VEGETATIVA",
+   "targetsPpm": {},
+   "ec": {
+    "min": 1.3,
+    "max": 1.6
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "fresa",
+   "stage": "FLORACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "fresa",
+   "stage": "FRUCTIFICACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "palta",
+   "stage": "PLANTULA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "palta",
+   "stage": "VEGETATIVA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "palta",
+   "stage": "FLORACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "palta",
+   "stage": "FRUCTIFICACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "manzana",
+   "stage": "PLANTULA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": 6.0,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "manzana",
+   "stage": "VEGETATIVA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": 6.0,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "manzana",
+   "stage": "FLORACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": 6.0,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "manzana",
+   "stage": "FRUCTIFICACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": 6.0,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "lechuga",
+   "stage": "PLANTULA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Solución La Molina (UNALM) como meta de referencia para hortalizas de hoja",
+   "recipeId": "la_molina"
+  },
+  {
+   "cropId": "lechuga",
+   "stage": "VEGETATIVA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Solución La Molina (UNALM) como meta de referencia para hortalizas de hoja",
+   "recipeId": "la_molina"
+  },
+  {
+   "cropId": "lechuga",
+   "stage": "FLORACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "lechuga",
+   "stage": "FRUCTIFICACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "albahaca",
+   "stage": "PLANTULA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "albahaca",
+   "stage": "VEGETATIVA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "albahaca",
+   "stage": "FLORACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "albahaca",
+   "stage": "FRUCTIFICACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "brocoli",
+   "stage": "PLANTULA",
+   "targetsPpm": {},
+   "ec": {
+    "min": 2.0,
+    "max": 3.5
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "brocoli",
+   "stage": "VEGETATIVA",
+   "targetsPpm": {},
+   "ec": {
+    "min": 2.0,
+    "max": 3.5
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "brocoli",
+   "stage": "FLORACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": 2.0,
+    "max": 3.5
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "brocoli",
+   "stage": "FRUCTIFICACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": 2.0,
+    "max": 3.5
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "tomate",
+   "stage": "PLANTULA",
+   "targetsPpm": {
+    "N_NO3": 70,
+    "P": 50,
+    "K": 120,
+    "Ca": 150,
+    "Mg": 50,
+    "S": 60,
+    "Fe": 2.8,
+    "Mn": 0.8,
+    "Zn": 0.3,
+    "Cu": 0.2,
+    "B": 0.7,
+    "Mo": 0.05
+   },
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Hochmuth G. & Hochmuth R., UF/IFAS HS796 (tomate en perlita/lana de roca/NFT) – etapa 1 (N total tratado como N-NO₃)",
+   "recipeId": null
+  },
+  {
+   "cropId": "tomate",
+   "stage": "VEGETATIVA",
+   "targetsPpm": {
+    "N_NO3": 80,
+    "P": 50,
+    "K": 120,
+    "Ca": 150,
+    "Mg": 50,
+    "S": 60,
+    "Fe": 2.8,
+    "Mn": 0.8,
+    "Zn": 0.3,
+    "Cu": 0.2,
+    "B": 0.7,
+    "Mo": 0.05
+   },
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Hochmuth G. & Hochmuth R., UF/IFAS HS796 (tomate en perlita/lana de roca/NFT) – etapa 2 (N total tratado como N-NO₃)",
+   "recipeId": null
+  },
+  {
+   "cropId": "tomate",
+   "stage": "FLORACION",
+   "targetsPpm": {
+    "N_NO3": 100,
+    "P": 50,
+    "K": 150,
+    "Ca": 150,
+    "Mg": 50,
+    "S": 60,
+    "Fe": 2.8,
+    "Mn": 0.8,
+    "Zn": 0.3,
+    "Cu": 0.2,
+    "B": 0.7,
+    "Mo": 0.05
+   },
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Hochmuth G. & Hochmuth R., UF/IFAS HS796 (tomate en perlita/lana de roca/NFT) – etapa 3 (N total tratado como N-NO₃)",
+   "recipeId": null
+  },
+  {
+   "cropId": "tomate",
+   "stage": "FRUCTIFICACION",
+   "targetsPpm": {
+    "N_NO3": 120,
+    "P": 50,
+    "K": 150,
+    "Ca": 150,
+    "Mg": 50,
+    "S": 60,
+    "Fe": 2.8,
+    "Mn": 0.8,
+    "Zn": 0.3,
+    "Cu": 0.2,
+    "B": 0.7,
+    "Mo": 0.05
+   },
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Hochmuth G. & Hochmuth R., UF/IFAS HS796 (tomate en perlita/lana de roca/NFT) – etapa 4 (N total tratado como N-NO₃)",
+   "recipeId": null
+  },
+  {
+   "cropId": "frijol",
+   "stage": "PLANTULA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "frijol",
+   "stage": "VEGETATIVA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "frijol",
+   "stage": "FLORACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "frijol",
+   "stage": "FRUCTIFICACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "perejil",
+   "stage": "PLANTULA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": 6.5
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "perejil",
+   "stage": "VEGETATIVA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": 6.5
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "perejil",
+   "stage": "FLORACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": 6.5
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "perejil",
+   "stage": "FRUCTIFICACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": 6.5
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "culantro",
+   "stage": "PLANTULA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": 6.5
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "culantro",
+   "stage": "VEGETATIVA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": 6.5
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "culantro",
+   "stage": "FLORACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": 6.5
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "culantro",
+   "stage": "FRUCTIFICACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": 6.5
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "rabanito",
+   "stage": "PLANTULA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "rabanito",
+   "stage": "VEGETATIVA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "rabanito",
+   "stage": "FLORACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "rabanito",
+   "stage": "FRUCTIFICACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "aji",
+   "stage": "PLANTULA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": 6.0
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "aji",
+   "stage": "VEGETATIVA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": 6.0
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "aji",
+   "stage": "FLORACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": 6.0
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "aji",
+   "stage": "FRUCTIFICACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": 6.0
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "pimiento",
+   "stage": "PLANTULA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": 6.0
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "pimiento",
+   "stage": "VEGETATIVA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": 6.0
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "pimiento",
+   "stage": "FLORACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": 6.0
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "pimiento",
+   "stage": "FRUCTIFICACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": 6.0
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "espinaca",
+   "stage": "PLANTULA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "espinaca",
+   "stage": "VEGETATIVA",
+   "targetsPpm": {},
+   "ec": {
+    "min": 1.8,
+    "max": 2.0
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "Proyecto Soluciones Nutritivas, rangos v2",
+   "recipeId": null
+  },
+  {
+   "cropId": "espinaca",
+   "stage": "FLORACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "espinaca",
+   "stage": "FRUCTIFICACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "cebolla_china",
+   "stage": "PLANTULA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "cebolla_china",
+   "stage": "VEGETATIVA",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "cebolla_china",
+   "stage": "FLORACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  },
+  {
+   "cropId": "cebolla_china",
+   "stage": "FRUCTIFICACION",
+   "targetsPpm": {},
+   "ec": {
+    "min": null,
+    "max": null
+   },
+   "ph": {
+    "min": null,
+    "max": null
+   },
+   "solutionTempC": {
+    "min": null,
+    "max": null
+   },
+   "dli": {
+    "min": null,
+    "max": null
+   },
+   "source": "TODO_FUENTE",
+   "recipeId": null
+  }
+ ]
+}

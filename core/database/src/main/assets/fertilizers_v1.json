@@ -1,0 +1,349 @@
+{
+ "version": 1,
+ "fertilizers": [
+  {
+   "purityPct": 100.0,
+   "solubilityGPerL": 1200.0,
+   "miscible": false,
+   "kind": "SAL",
+   "acid": null,
+   "pricePerKgPen": null,
+   "supplier": "",
+   "editable": true,
+   "source": "Etiqueta típica 15,5-0-0-19Ca (14,4 % N-NO₃ + 1,1 % N-NH₄); solubilidad: ficha técnica del fabricante",
+   "verified": true,
+   "id": "nitrato_calcio",
+   "name": "Nitrato de calcio (grado fertilizante)",
+   "chemicalFormula": "5Ca(NO₃)₂·NH₄NO₃·10H₂O",
+   "composition": {
+    "N_NO3": 14.4,
+    "N_NH4": 1.1,
+    "Ca": 19.0
+   },
+   "defaultTank": "A"
+  },
+  {
+   "purityPct": 100.0,
+   "solubilityGPerL": 1212.0,
+   "miscible": false,
+   "kind": "SAL",
+   "acid": null,
+   "pricePerKgPen": null,
+   "supplier": "",
+   "editable": true,
+   "source": "Estequiometría (masas atómicas IUPAC); solubilidad: CRC Handbook of Chemistry and Physics / fichas de seguridad",
+   "verified": true,
+   "id": "nitrato_calcio_4h2o",
+   "name": "Nitrato de calcio tetrahidratado (reactivo)",
+   "chemicalFormula": "Ca(NO₃)₂·4H₂O",
+   "composition": {
+    "N_NO3": 11.863,
+    "Ca": 16.972
+   },
+   "defaultTank": "A"
+  },
+  {
+   "purityPct": 100.0,
+   "solubilityGPerL": 316.0,
+   "miscible": false,
+   "kind": "SAL",
+   "acid": null,
+   "pricePerKgPen": null,
+   "supplier": "",
+   "editable": true,
+   "source": "Estequiometría (masas atómicas IUPAC); solubilidad: CRC Handbook of Chemistry and Physics / fichas de seguridad",
+   "verified": true,
+   "id": "nitrato_potasio",
+   "name": "Nitrato de potasio",
+   "chemicalFormula": "KNO₃",
+   "composition": {
+    "N_NO3": 13.854,
+    "K": 38.672
+   },
+   "defaultTank": "B"
+  },
+  {
+   "purityPct": 100.0,
+   "solubilityGPerL": 226.0,
+   "miscible": false,
+   "kind": "SAL",
+   "acid": null,
+   "pricePerKgPen": null,
+   "supplier": "",
+   "editable": true,
+   "source": "Estequiometría (masas atómicas IUPAC); solubilidad: CRC Handbook of Chemistry and Physics / fichas de seguridad",
+   "verified": true,
+   "id": "fosfato_monopotasico",
+   "name": "Fosfato monopotásico (MKP)",
+   "chemicalFormula": "KH₂PO₄",
+   "composition": {
+    "P": 22.761,
+    "K": 28.731
+   },
+   "defaultTank": "B"
+  },
+  {
+   "purityPct": 100.0,
+   "solubilityGPerL": 710.0,
+   "miscible": false,
+   "kind": "SAL",
+   "acid": null,
+   "pricePerKgPen": null,
+   "supplier": "",
+   "editable": true,
+   "source": "Estequiometría (masas atómicas IUPAC); solubilidad: CRC Handbook of Chemistry and Physics / fichas de seguridad",
+   "verified": true,
+   "id": "sulfato_magnesio",
+   "name": "Sulfato de magnesio heptahidratado",
+   "chemicalFormula": "MgSO₄·7H₂O",
+   "composition": {
+    "Mg": 9.861,
+    "S": 13.008
+   },
+   "defaultTank": "B"
+  },
+  {
+   "purityPct": 100.0,
+   "solubilityGPerL": 111.0,
+   "miscible": false,
+   "kind": "SAL",
+   "acid": null,
+   "pricePerKgPen": null,
+   "supplier": "",
+   "editable": true,
+   "source": "Estequiometría (masas atómicas IUPAC); solubilidad: CRC Handbook of Chemistry and Physics / fichas de seguridad",
+   "verified": true,
+   "id": "sulfato_potasio",
+   "name": "Sulfato de potasio",
+   "chemicalFormula": "K₂SO₄",
+   "composition": {
+    "K": 44.875,
+    "S": 18.399
+   },
+   "defaultTank": "B"
+  },
+  {
+   "purityPct": 100.0,
+   "solubilityGPerL": 1250.0,
+   "miscible": false,
+   "kind": "SAL",
+   "acid": null,
+   "pricePerKgPen": null,
+   "supplier": "",
+   "editable": true,
+   "source": "Estequiometría (masas atómicas IUPAC); solubilidad: CRC Handbook of Chemistry and Physics / fichas de seguridad",
+   "verified": true,
+   "id": "nitrato_magnesio",
+   "name": "Nitrato de magnesio hexahidratado",
+   "chemicalFormula": "Mg(NO₃)₂·6H₂O",
+   "composition": {
+    "N_NO3": 10.926,
+    "Mg": 9.479
+   },
+   "defaultTank": "B"
+  },
+  {
+   "purityPct": 100.0,
+   "solubilityGPerL": null,
+   "miscible": false,
+   "kind": "QUELATO",
+   "acid": null,
+   "pricePerKgPen": null,
+   "supplier": "",
+   "editable": true,
+   "source": "Etiqueta comercial típica (13 % Fe). Solubilidad: TODO_FUENTE",
+   "verified": false,
+   "id": "quelato_fe_edta",
+   "name": "Quelato de hierro EDTA 13 %",
+   "chemicalFormula": "Fe-EDTA",
+   "composition": {
+    "Fe": 13.0
+   },
+   "defaultTank": "A"
+  },
+  {
+   "purityPct": 100.0,
+   "solubilityGPerL": null,
+   "miscible": false,
+   "kind": "QUELATO",
+   "acid": null,
+   "pricePerKgPen": null,
+   "supplier": "",
+   "editable": true,
+   "source": "Etiqueta comercial típica (11 % Fe). Solubilidad: TODO_FUENTE",
+   "verified": false,
+   "id": "quelato_fe_dtpa",
+   "name": "Quelato de hierro DTPA 11 %",
+   "chemicalFormula": "Fe-DTPA",
+   "composition": {
+    "Fe": 11.0
+   },
+   "defaultTank": "A"
+  },
+  {
+   "purityPct": 100.0,
+   "solubilityGPerL": 47.2,
+   "miscible": false,
+   "kind": "SAL",
+   "acid": null,
+   "pricePerKgPen": null,
+   "supplier": "",
+   "editable": true,
+   "source": "Estequiometría (masas atómicas IUPAC); solubilidad: CRC Handbook of Chemistry and Physics / fichas de seguridad",
+   "verified": true,
+   "id": "acido_borico",
+   "name": "Ácido bórico",
+   "chemicalFormula": "H₃BO₃",
+   "composition": {
+    "B": 17.483
+   },
+   "defaultTank": "B"
+  },
+  {
+   "purityPct": 100.0,
+   "solubilityGPerL": 762.0,
+   "miscible": false,
+   "kind": "SAL",
+   "acid": null,
+   "pricePerKgPen": null,
+   "supplier": "",
+   "editable": true,
+   "source": "Estequiometría (masas atómicas IUPAC); solubilidad: CRC Handbook of Chemistry and Physics / fichas de seguridad",
+   "verified": true,
+   "id": "sulfato_manganeso",
+   "name": "Sulfato de manganeso monohidratado",
+   "chemicalFormula": "MnSO₄·H₂O",
+   "composition": {
+    "Mn": 32.506,
+    "S": 18.969
+   },
+   "defaultTank": "B"
+  },
+  {
+   "purityPct": 100.0,
+   "solubilityGPerL": 965.0,
+   "miscible": false,
+   "kind": "SAL",
+   "acid": null,
+   "pricePerKgPen": null,
+   "supplier": "",
+   "editable": true,
+   "source": "Estequiometría (masas atómicas IUPAC); solubilidad: CRC Handbook of Chemistry and Physics / fichas de seguridad",
+   "verified": true,
+   "id": "sulfato_zinc",
+   "name": "Sulfato de zinc heptahidratado",
+   "chemicalFormula": "ZnSO₄·7H₂O",
+   "composition": {
+    "Zn": 22.738,
+    "S": 11.15
+   },
+   "defaultTank": "B"
+  },
+  {
+   "purityPct": 100.0,
+   "solubilityGPerL": 317.0,
+   "miscible": false,
+   "kind": "SAL",
+   "acid": null,
+   "pricePerKgPen": null,
+   "supplier": "",
+   "editable": true,
+   "source": "Estequiometría (masas atómicas IUPAC); solubilidad: CRC Handbook of Chemistry and Physics / fichas de seguridad",
+   "verified": true,
+   "id": "sulfato_cobre",
+   "name": "Sulfato de cobre pentahidratado",
+   "chemicalFormula": "CuSO₄·5H₂O",
+   "composition": {
+    "Cu": 25.451,
+    "S": 12.841
+   },
+   "defaultTank": "B"
+  },
+  {
+   "purityPct": 100.0,
+   "solubilityGPerL": null,
+   "miscible": false,
+   "kind": "SAL",
+   "acid": null,
+   "pricePerKgPen": null,
+   "supplier": "",
+   "editable": true,
+   "source": "Estequiometría (masas atómicas IUPAC); solubilidad: CRC Handbook of Chemistry and Physics / fichas de seguridad. Solubilidad: TODO_FUENTE",
+   "verified": true,
+   "id": "molibdato_sodio",
+   "name": "Molibdato de sodio dihidratado",
+   "chemicalFormula": "Na₂MoO₄·2H₂O",
+   "composition": {
+    "Mo": 39.656
+   },
+   "defaultTank": "B"
+  },
+  {
+   "purityPct": 60.0,
+   "solubilityGPerL": null,
+   "miscible": true,
+   "kind": "ACIDO",
+   "acid": {
+    "molarMass": 63.012,
+    "equivalentsPerMol": 1.0,
+    "densityGPerMl": 1.37
+   },
+   "pricePerKgPen": null,
+   "supplier": "",
+   "editable": true,
+   "source": "Estequiometría (masas atómicas IUPAC); solubilidad: CRC Handbook of Chemistry and Physics / fichas de seguridad (densidad de HNO₃ 60 % ≈ 1,37 g/mL)",
+   "verified": true,
+   "id": "acido_nitrico",
+   "name": "Ácido nítrico 60 %",
+   "chemicalFormula": "HNO₃",
+   "composition": {
+    "N_NO3": 22.229
+   },
+   "defaultTank": "ACIDO"
+  },
+  {
+   "purityPct": 85.0,
+   "solubilityGPerL": null,
+   "miscible": true,
+   "kind": "ACIDO",
+   "acid": {
+    "molarMass": 97.994,
+    "equivalentsPerMol": 1.0,
+    "densityGPerMl": 1.685
+   },
+   "pricePerKgPen": null,
+   "supplier": "",
+   "editable": true,
+   "source": "Estequiometría (masas atómicas IUPAC); solubilidad: CRC Handbook of Chemistry and Physics / fichas de seguridad (densidad de H₃PO₄ 85 % ≈ 1,685 g/mL; 1 H⁺ aprovechable a pH 5,5–6)",
+   "verified": true,
+   "id": "acido_fosforico",
+   "name": "Ácido fosfórico 85 %",
+   "chemicalFormula": "H₃PO₄",
+   "composition": {
+    "P": 31.608
+   },
+   "defaultTank": "ACIDO"
+  },
+  {
+   "purityPct": 100.0,
+   "solubilityGPerL": null,
+   "miscible": false,
+   "kind": "MEZCLA",
+   "acid": null,
+   "pricePerKgPen": null,
+   "supplier": "",
+   "editable": true,
+   "source": "Etiqueta 4-18-38 (conversión P₂O₅→P y K₂O→K). Mg, S y micronutrientes de la etiqueta: TODO_FUENTE (verifica tu saco)",
+   "verified": false,
+   "id": "masterblend_41838",
+   "name": "MasterBlend 4-18-38",
+   "chemicalFormula": "Mezcla NPK + micros",
+   "defaultTank": "B",
+   "composition": {
+    "N_NO3": 4.0,
+    "P": 7.856,
+    "K": 31.545
+   }
+  }
+ ]
+}

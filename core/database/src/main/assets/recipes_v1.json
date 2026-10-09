@@ -1,0 +1,66 @@
+{
+ "version": 1,
+ "recipes": [
+  {
+   "id": "hoagland",
+   "name": "Solución Hoagland",
+   "source": "Hoagland D.R. & Arnon D.I. (1950). The water-culture method for growing plants without soil. Calif. Agric. Exp. Stn. Circ. 347",
+   "description": "Solución clásica de laboratorio (N totalmente nítrico, variante n.º 1).",
+   "targetsPpm": {
+    "N_NO3": 210,
+    "P": 31,
+    "K": 235,
+    "Ca": 200,
+    "Mg": 48,
+    "S": 64,
+    "Fe": 2.5,
+    "Mn": 0.5,
+    "Zn": 0.05,
+    "Cu": 0.02,
+    "B": 0.5,
+    "Mo": 0.01
+   },
+   "verified": true,
+   "note": "Fe: la literatura cita 1–5 mg/L según la fuente de hierro; se usa 2,5."
+  },
+  {
+   "id": "la_molina",
+   "name": "Solución La Molina",
+   "source": "Rodríguez-Delfín A., Centro de Investigación de Hidroponía, Universidad Nacional Agraria La Molina (UNALM)",
+   "description": "Dosis de uso: 5 mL de solución A y 2 mL de solución B por litro de agua.",
+   "targetsPpm": {
+    "N_NO3": 190,
+    "P": 35,
+    "K": 210,
+    "Ca": 150,
+    "Mg": 45,
+    "S": 70,
+    "Fe": 1.0,
+    "Mn": 0.5,
+    "Zn": 0.15,
+    "Cu": 0.1,
+    "B": 0.5,
+    "Mo": 0.05
+   },
+   "verified": false,
+   "note": "Concentraciones ampliamente citadas; verifica contra la publicación original de la UNALM."
+  },
+  {
+   "id": "masterblend",
+   "name": "MasterBlend + nitrato de calcio + sulfato de magnesio",
+   "source": "Instrucciones comerciales (12 g + 12 g + 6 g por 5 galones US)",
+   "description": "Proporción 2:2:1 en peso. Valores calculados desde la etiqueta 4-18-38; sin micronutrientes verificados.",
+   "targetsPpm": {
+    "N_NO3": 116.66,
+    "P": 49.81,
+    "K": 200.0,
+    "N_NH4": 6.97,
+    "Ca": 120.46,
+    "Mg": 31.26,
+    "S": 41.24
+   },
+   "verified": false,
+   "note": "Calculado por APhid desde la etiqueta; Mg/S/micros del MasterBlend pendientes."
+  }
+ ]
+}
