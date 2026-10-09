@@ -49,7 +49,7 @@ class SystemsViewModelTest {
             if (first == null) first = awaitItem()
             assertEquals(emptyList<GrowSystem>(), first)
             repo.upsert(GrowSystem(id = 1, name = "NFT", type = GrowSystemType.NFT, volumeL = 60.0))
-            assertEquals("NFT", awaitItem().single().name)
+            assertEquals("NFT", awaitItem()!!.single().name)
         }
     }
 }

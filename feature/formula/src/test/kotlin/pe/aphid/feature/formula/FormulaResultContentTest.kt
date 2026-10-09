@@ -2,6 +2,7 @@ package pe.aphid.feature.formula
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
@@ -53,7 +54,7 @@ class FormulaResultContentTest {
             }
         }
         compose.onNodeWithText("Tanque A (calcio y hierro)").assertIsDisplayed()
-        compose.onNodeWithText("Nitrato de calcio", substring = true).assertIsDisplayed()
+        compose.onNodeWithContentDescription("Nitrato de calcio", substring = true).assertIsDisplayed()
         compose.onNodeWithText("Exportar PDF").performScrollTo().performClick()
         assertTrue(pdf)
     }

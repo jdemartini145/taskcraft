@@ -46,6 +46,8 @@ private fun Project.configureKotlinCommon() {
     tasks.withType<Test>().configureEach {
         useJUnitPlatform()
         maxHeapSize = "2g"
+        // Módulos sin pruebas propias no deben romper el build.
+        failOnNoDiscoveredTests.set(false)
     }
     dependencies {
         add("testImplementation", platform(libs.lib("junit-bom")))
