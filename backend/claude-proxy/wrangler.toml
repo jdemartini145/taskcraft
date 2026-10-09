@@ -1,0 +1,16 @@
+name = "aphid-claude-proxy"
+main = "src/index.ts"
+compatibility_date = "2026-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Límite de uso por instalación (contador diario).
+[[kv_namespaces]]
+binding = "USAGE"
+id = "REEMPLAZAR_CON_ID_DEL_KV"
+
+[vars]
+DAILY_LIMIT = "20"
+MODEL = "claude-opus-5-5"
+
+# La clave NO va aquí: se carga como secreto con
+#   wrangler secret put ANTHROPIC_API_KEY

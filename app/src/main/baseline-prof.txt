@@ -1,0 +1,10 @@
+# Baseline Profile de APhid (formato legible). Precompila el arranque, la navegación y el
+# motor de fórmulas para reducir el tiempo de arranque en frío en gama media.
+# Las bibliotecas de Compose/AndroidX incluyen sus propios perfiles.
+HSPLpe/aphid/app/**->**(**)**
+Lpe/aphid/app/**;
+HSPLpe/aphid/core/**->**(**)**
+Lpe/aphid/core/**;
+HSPLpe/aphid/feature/systems/**->**(**)**
+HSPLpe/aphid/feature/formula/**->**(**)**
+HSPLpe/aphid/feature/log/**->**(**)**
