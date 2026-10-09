@@ -9,7 +9,7 @@ internal val Project.libs: VersionCatalog
 internal fun VersionCatalog.lib(alias: String) = findLibrary(alias).get()
 
 internal object AphidSdk {
-    const val COMPILE = 36
+    const val COMPILE = 37
     const val TARGET = 36
     const val MIN = 26
 }
