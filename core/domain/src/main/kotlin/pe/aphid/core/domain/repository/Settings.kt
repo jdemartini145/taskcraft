@@ -20,6 +20,7 @@ data class UserSettings(
     /** Consentimiento general (Ley 29733) para usar IA en la nube; además se pide por foto. */
     val cloudAiConsent: Boolean = false,
     val currencyCode: String = "PEN",
+    val sensorsEnabled: Boolean = false,
     val sensorHeartbeatMinutes: Int = 5,
     val sensorTimeoutMinutes: Int = 15,
     val proActive: Boolean = false,

@@ -1,5 +1,6 @@
 package pe.aphid.core.data.repository
 
+import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import pe.aphid.core.database.DbJson
@@ -46,7 +47,6 @@ import pe.aphid.core.model.Reading
 import pe.aphid.core.model.ReferenceRecipe
 import pe.aphid.core.model.SavedFormula
 import pe.aphid.core.model.WaterAnalysis
-import javax.inject.Inject
 
 /** Room devuelve -1 en un upsert que actualiza: en ese caso el id es el del objeto. */
 private fun Long.orId(id: Long) = if (this == -1L) id else this

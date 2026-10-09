@@ -3,9 +3,6 @@ package pe.aphid.core.data.export
 import android.graphics.Paint
 import android.graphics.Typeface
 import android.graphics.pdf.PdfDocument
-import pe.aphid.core.model.FormulaResult
-import pe.aphid.core.model.Reading
-import pe.aphid.core.model.TankGroup
 import java.io.File
 import java.io.FileOutputStream
 import java.text.NumberFormat
@@ -13,6 +10,9 @@ import java.time.Instant
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.Locale
+import pe.aphid.core.model.FormulaResult
+import pe.aphid.core.model.Reading
+import pe.aphid.core.model.TankGroup
 
 /**
  * Exporta a PDF con `android.graphics.pdf.PdfDocument` (A4, 72 ppp).
@@ -73,7 +73,8 @@ class PdfExporter(private val locale: Locale = Locale.forLanguageTag("es-PE")) {
         val doc = PdfDocument()
         val w = Writer(doc)
         w.line("APhid — $title", w.title)
-        w.line("Volumen del reservorio: ${n(result.request.reservoirVolumeL, 0)} L · Factor ${result.request.concentrationFactor.value}x · Tanques de ${n(result.request.tankVolumeL, 1)} L")
+        val req = result.request
+        w.line("Volumen del reservorio: ${n(req.reservoirVolumeL, 0)} L · Factor ${req.concentrationFactor.value}x · Tanques de ${n(req.tankVolumeL, 1)} L")
         w.line("Fuente de la meta: ${result.targetSource}")
         w.gap()
         result.tanks.forEach { t ->

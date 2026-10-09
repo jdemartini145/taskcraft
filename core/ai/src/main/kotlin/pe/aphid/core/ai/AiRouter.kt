@@ -1,5 +1,8 @@
 package pe.aphid.core.ai
 
+import java.io.File
+import javax.inject.Inject
+import javax.inject.Singleton
 import pe.aphid.core.domain.ai.AiValidationException
 import pe.aphid.core.domain.ai.RuleBasedRequestParser
 import pe.aphid.core.model.Crop
@@ -7,9 +10,6 @@ import pe.aphid.core.model.DiagnosisOutput
 import pe.aphid.core.model.FormulaRequest
 import pe.aphid.core.model.FormulaResult
 import timber.log.Timber
-import java.io.File
-import javax.inject.Inject
-import javax.inject.Singleton
 
 sealed interface AiOutcome<out T> {
     data class Ok<T>(val value: T, val providerId: String) : AiOutcome<T>
@@ -60,9 +60,10 @@ class AiRouter @Inject constructor(
             cloud.consentGranted = true
             try {
                 return AiOutcome.Ok(cloud.diagnose(image, enriched), cloud.id)
+            } catch (e: AiValidationException) {
+                return AiOutcome.Failed("La respuesta de la nube no fue válida y se descartó: ${e.message}")
             } catch (e: Exception) {
                 Timber.w(e, "Diagnóstico en la nube falló")
-                if (e is AiValidationException) return AiOutcome.Failed("La respuesta de la nube no fue válida y se descartó: ${e.message}")
             } finally {
                 cloud.consentGranted = false
             }

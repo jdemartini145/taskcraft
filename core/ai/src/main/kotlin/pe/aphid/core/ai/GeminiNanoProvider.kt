@@ -3,15 +3,15 @@ package pe.aphid.core.ai
 import com.google.mlkit.genai.common.FeatureStatus
 import com.google.mlkit.genai.prompt.Generation
 import com.google.mlkit.genai.prompt.GenerativeModel
+import java.io.File
+import javax.inject.Inject
+import javax.inject.Singleton
 import pe.aphid.core.domain.ai.AiSchemaValidator
 import pe.aphid.core.model.Crop
 import pe.aphid.core.model.DiagnosisOutput
 import pe.aphid.core.model.FormulaRequest
 import pe.aphid.core.model.FormulaResult
 import timber.log.Timber
-import java.io.File
-import javax.inject.Inject
-import javax.inject.Singleton
 
 /**
  * Nivel 2: Gemini Nano mediante ML Kit GenAI Prompt API. Se consulta la disponibilidad

@@ -24,6 +24,7 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import kotlin.math.abs
 import pe.aphid.core.designsystem.R
 import pe.aphid.core.designsystem.component.BannerKind
 import pe.aphid.core.designsystem.component.InfoBanner
@@ -35,7 +36,6 @@ import pe.aphid.core.model.FormulaResult
 import pe.aphid.core.model.TankGroup
 import pe.aphid.core.model.ValueRange
 import pe.aphid.core.model.WarningKind
-import kotlin.math.abs
 
 /** Pantalla 2 del asistente: gramos por tanque, ppm contra meta, EC, costo y acciones. */
 @OptIn(ExperimentalLayoutApi::class)
@@ -150,7 +150,13 @@ fun FormulaResultContent(
 
 private const val DEVIATION_WARN = 10.0
 
-private fun decimalsFor(v: Double) = if (v >= 10) 0 else if (v >= 1) 1 else 2
+private fun decimalsFor(v: Double) = if (v >= 10) {
+    0
+} else if (v >= 1) {
+    1
+} else {
+    2
+}
 
 @Composable
 private fun rangeLabel(r: ValueRange): String = when {

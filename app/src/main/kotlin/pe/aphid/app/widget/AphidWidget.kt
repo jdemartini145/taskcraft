@@ -24,6 +24,10 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import java.text.DateFormat
+import java.util.Date
+import javax.inject.Inject
+import javax.inject.Singleton
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
@@ -36,10 +40,6 @@ import pe.aphid.core.domain.repository.ReadingRepository
 import pe.aphid.core.domain.repository.TaskRepository
 import pe.aphid.core.model.CareTask
 import pe.aphid.core.model.Reading
-import java.text.DateFormat
-import java.util.Date
-import javax.inject.Inject
-import javax.inject.Singleton
 
 @EntryPoint
 @InstallIn(SingletonComponent::class)

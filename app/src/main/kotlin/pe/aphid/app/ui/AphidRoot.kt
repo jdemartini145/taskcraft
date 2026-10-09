@@ -6,6 +6,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteScaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -20,15 +21,18 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import kotlin.reflect.KClass
 import kotlinx.serialization.Serializable
 import pe.aphid.core.designsystem.R
 import pe.aphid.core.designsystem.icon.AphidIcons
 import pe.aphid.core.designsystem.theme.AphidTheme
+import pe.aphid.feature.alerts.AlertsRoute
+import pe.aphid.feature.diagnosis.DiagnosisRoute
 import pe.aphid.feature.formula.FormulaRoute
 import pe.aphid.feature.formula.formulaGraph
+import pe.aphid.feature.log.LogRoute
 import pe.aphid.feature.systems.SystemsRoute
 import pe.aphid.feature.systems.systemsGraph
-import kotlin.reflect.KClass
 
 @Serializable data object MoreRoute
 
@@ -36,13 +40,13 @@ import kotlin.reflect.KClass
 enum class TopLevel(val route: Any, val routeClass: KClass<*>, val label: Int, val icon: () -> ImageVector) {
     SYSTEMS(SystemsRoute, SystemsRoute::class, R.string.nav_systems, { AphidIcons.Leaf }),
     FORMULA(FormulaRoute, FormulaRoute::class, R.string.nav_formula, { AphidIcons.Flask }),
-    LOG(LogTabRoute, LogTabRoute::class, R.string.nav_log, { AphidIcons.List }),
-    DIAGNOSIS(DiagnosisTabRoute, DiagnosisTabRoute::class, R.string.nav_diagnosis, { AphidIcons.Camera }),
+    LOG(LogRoute, LogRoute::class, R.string.nav_log, { AphidIcons.List }),
+    DIAGNOSIS(DiagnosisRoute, DiagnosisRoute::class, R.string.nav_diagnosis, { AphidIcons.Camera }),
     MORE(MoreRoute, MoreRoute::class, R.string.nav_more, { AphidIcons.More }),
 }
 
 @Composable
-fun AphidRoot(viewModel: MainViewModel = hiltViewModel()) {
+fun AphidRoot(openAlerts: Boolean = false, viewModel: MainViewModel = hiltViewModel()) {
     val settings by viewModel.userSettings.collectAsStateWithLifecycle()
     AphidTheme {
         Surface(Modifier.fillMaxSize()) {
@@ -50,14 +54,15 @@ fun AphidRoot(viewModel: MainViewModel = hiltViewModel()) {
             if (!s.onboardingDone) {
                 OnboardingScreen(onFinish = viewModel::finishOnboarding)
             } else {
-                AphidApp()
+                AphidApp(openAlerts = openAlerts)
             }
         }
     }
 }
 
 @Composable
-fun AphidApp(navController: NavHostController = rememberNavController()) {
+fun AphidApp(openAlerts: Boolean = false, navController: NavHostController = rememberNavController()) {
+    LaunchedEffect(openAlerts) { if (openAlerts) navController.navigate(AlertsRoute) }
     val backStack by navController.currentBackStackEntryAsState()
     val destination = backStack?.destination
     NavigationSuiteScaffold(

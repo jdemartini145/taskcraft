@@ -16,11 +16,11 @@ import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Inject
+import javax.inject.Singleton
 import pe.aphid.core.model.Alert
 import pe.aphid.core.model.AlertKind
 import pe.aphid.core.model.AlertSeverity
-import javax.inject.Inject
-import javax.inject.Singleton
 
 interface Notifier {
     fun canNotify(): Boolean

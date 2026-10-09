@@ -142,7 +142,13 @@ fun WaterEditScreen(onDone: () -> Unit, viewModel: WaterEditViewModel = hiltView
                     value = state.values[field] ?: "",
                     onValueChange = { v -> viewModel.update { it.copy(values = it.values + (field to v)) } },
                     label = field,
-                    suffix = if (field == "pH") null else if (field == "EC") "mS/cm" else "mg/L",
+                    suffix = if (field == "pH") {
+                        null
+                    } else if (field == "EC") {
+                        "mS/cm"
+                    } else {
+                        "mg/L"
+                    },
                     modifier = Modifier.fillMaxWidth(),
                 )
             }

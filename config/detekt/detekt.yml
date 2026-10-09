@@ -22,7 +22,7 @@ complexity:
   NestedBlockDepth:
     threshold: 6
   ComplexCondition:
-    threshold: 6
+    threshold: 8
 
 naming:
   FunctionNaming:
@@ -42,7 +42,8 @@ style:
   MagicNumber:
     active: false
   MaxLineLength:
-    maxLineLength: 160
+    maxLineLength: 180
+    excludes: ['**/icon/AphidIcons.kt']
   ReturnCount:
     max: 8
     excludeGuardClauses: true

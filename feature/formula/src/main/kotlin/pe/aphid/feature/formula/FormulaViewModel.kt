@@ -5,6 +5,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
+import java.io.File
+import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -42,8 +44,6 @@ import pe.aphid.core.model.GrowthStage
 import pe.aphid.core.model.ReferenceRecipe
 import pe.aphid.core.model.SavedFormula
 import pe.aphid.core.model.WaterAnalysis
-import java.io.File
-import javax.inject.Inject
 
 data class TargetInfo(val source: String, val pendingNote: String?, val available: Boolean)
 

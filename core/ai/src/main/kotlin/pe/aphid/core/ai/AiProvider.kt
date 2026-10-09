@@ -1,10 +1,10 @@
 package pe.aphid.core.ai
 
+import java.io.File
 import pe.aphid.core.model.Crop
 import pe.aphid.core.model.DiagnosisOutput
 import pe.aphid.core.model.FormulaRequest
 import pe.aphid.core.model.FormulaResult
-import java.io.File
 
 /** El proveedor no está disponible en este dispositivo o sin consentimiento. */
 class AiUnavailableException(message: String) : Exception(message)

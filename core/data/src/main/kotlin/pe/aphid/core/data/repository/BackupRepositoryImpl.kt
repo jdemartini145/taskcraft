@@ -1,6 +1,7 @@
 package pe.aphid.core.data.repository
 
 import androidx.room.withTransaction
+import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withContext
@@ -21,7 +22,6 @@ import pe.aphid.core.model.PestRecord
 import pe.aphid.core.model.Planting
 import pe.aphid.core.model.Reading
 import pe.aphid.core.model.WaterAnalysis
-import javax.inject.Inject
 
 /** Respaldo completo del usuario. Los datos semilla no se incluyen (se recargan). */
 @Serializable
@@ -43,7 +43,15 @@ data class BackupFile(
 )
 
 @Serializable
-data class FormulaRow(val createdMillis: Long, val label: String, val requestJson: String, val resultJson: String, val estimatedEc: Double, val cost: Double?, val engineVersion: String)
+data class FormulaRow(
+    val createdMillis: Long,
+    val label: String,
+    val requestJson: String,
+    val resultJson: String,
+    val estimatedEc: Double,
+    val cost: Double?,
+    val engineVersion: String,
+)
 
 @Serializable
 data class DiagnosisRow(val systemId: Long?, val createdMillis: Long, val provider: String, val outputJson: String)
@@ -84,7 +92,9 @@ class BackupRepositoryImpl @Inject constructor(
             file.tasks.forEach { db.taskDao().upsert(it.toEntity()) }
             file.alerts.forEach { db.alertDao().insert(it.toEntity().copy(id = 0)) }
             file.pests.forEach { db.pestDao().insert(it.toEntity().copy(id = 0)) }
-            db.formulaDao().insertAll(file.formulas.map { FormulaResultEntity(0, it.createdMillis, it.label, it.requestJson, it.resultJson, it.estimatedEc, it.cost, it.engineVersion) })
+            db.formulaDao().insertAll(
+                file.formulas.map { FormulaResultEntity(0, it.createdMillis, it.label, it.requestJson, it.resultJson, it.estimatedEc, it.cost, it.engineVersion) },
+            )
             file.diagnoses.forEach { db.diagnosisDao().insert(DiagnosisEntity(0, it.systemId, null, it.createdMillis, it.provider, it.outputJson)) }
         }
         settings.update { file.settings }

@@ -5,6 +5,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.toRoute
 import dagger.hilt.android.lifecycle.HiltViewModel
+import java.time.LocalDate
+import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -23,8 +25,6 @@ import pe.aphid.core.model.GrowSystem
 import pe.aphid.core.model.GrowSystemType
 import pe.aphid.core.model.GrowthStage
 import pe.aphid.core.model.Planting
-import java.time.LocalDate
-import javax.inject.Inject
 
 @HiltViewModel
 class SystemsViewModel @Inject constructor(repo: SystemRepository) : ViewModel() {

@@ -3,13 +3,13 @@ package pe.aphid.app.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import pe.aphid.core.domain.repository.SettingsRepository
 import pe.aphid.core.domain.repository.UserSettings
-import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(private val settings: SettingsRepository) : ViewModel() {

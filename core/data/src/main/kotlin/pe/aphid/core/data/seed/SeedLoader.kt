@@ -2,6 +2,8 @@ package pe.aphid.core.data.seed
 
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext
+import javax.inject.Inject
+import javax.inject.Singleton
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withContext
@@ -11,8 +13,6 @@ import pe.aphid.core.database.dao.FertilizerDao
 import pe.aphid.core.database.toEntity
 import pe.aphid.core.model.SeedParser
 import timber.log.Timber
-import javax.inject.Inject
-import javax.inject.Singleton
 
 /**
  * Carga los datos semilla desde `assets/` la primera vez y cuando cambia su versión.

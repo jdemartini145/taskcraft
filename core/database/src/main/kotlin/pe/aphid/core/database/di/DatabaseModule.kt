@@ -7,8 +7,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import pe.aphid.core.database.AphidDatabase
 import javax.inject.Singleton
+import pe.aphid.core.database.AphidDatabase
 
 @Module
 @InstallIn(SingletonComponent::class)

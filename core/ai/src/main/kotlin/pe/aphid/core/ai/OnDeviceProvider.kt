@@ -4,6 +4,13 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import dagger.hilt.android.qualifiers.ApplicationContext
+import java.io.File
+import java.io.FileNotFoundException
+import java.nio.ByteBuffer
+import java.nio.ByteOrder
+import javax.inject.Inject
+import javax.inject.Singleton
+import kotlin.math.exp
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.tensorflow.lite.DataType
@@ -14,13 +21,6 @@ import pe.aphid.core.model.Crop
 import pe.aphid.core.model.DiagnosisOutput
 import pe.aphid.core.model.FormulaRequest
 import pe.aphid.core.model.FormulaResult
-import java.io.File
-import java.io.FileNotFoundException
-import java.nio.ByteBuffer
-import java.nio.ByteOrder
-import javax.inject.Inject
-import javax.inject.Singleton
-import kotlin.math.exp
 
 /**
  * Nivel 1, 100 % offline: parser por reglas, explicación por plantillas y clasificador

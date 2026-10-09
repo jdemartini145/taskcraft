@@ -11,16 +11,16 @@ import io.ktor.client.request.setBody
 import io.ktor.http.ContentType
 import io.ktor.http.contentType
 import io.ktor.http.isSuccess
+import java.io.File
+import java.util.UUID
+import javax.inject.Inject
+import javax.inject.Singleton
 import kotlinx.serialization.Serializable
 import pe.aphid.core.domain.ai.AiSchemaValidator
 import pe.aphid.core.model.Crop
 import pe.aphid.core.model.DiagnosisOutput
 import pe.aphid.core.model.FormulaRequest
 import pe.aphid.core.model.FormulaResult
-import java.io.File
-import java.util.UUID
-import javax.inject.Inject
-import javax.inject.Singleton
 
 @Serializable
 data class ProxyRequest(val task: String, val prompt: String, val imageBase64: String? = null, val locale: String = "es-PE")

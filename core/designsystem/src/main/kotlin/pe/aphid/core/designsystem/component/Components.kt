@@ -28,11 +28,11 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import java.text.NumberFormat
+import java.util.Locale
 import pe.aphid.core.designsystem.R
 import pe.aphid.core.designsystem.icon.AphidIcons
 import pe.aphid.core.designsystem.theme.WarningAmber
-import java.text.NumberFormat
-import java.util.Locale
 
 /** Locale de formato numérico: español de Perú por defecto (coma decimal). */
 val AphidLocale: Locale = Locale.forLanguageTag("es-PE")

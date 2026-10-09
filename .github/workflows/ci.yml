@@ -36,16 +36,32 @@ jobs:
           fi
 
       - name: Compilar (debug) y pruebas unitarias
-        run: ./gradlew assembleDebug testDebugUnitTest --stacktrace --continue
+        run: |
+          set -o pipefail
+          ./gradlew assembleDebug testDebugUnitTest --continue --console=plain 2>&1 | tee build.log
 
       - name: Análisis estático (detekt + ktlint)
         run: ./gradlew detekt ktlintCheck --continue
 
       - name: Lint de Android
-        run: ./gradlew lintDebug --continue
+        run: |
+          set -o pipefail
+          ./gradlew lintDebug --continue --console=plain 2>&1 | tee lint.log
 
       - name: Build release (R8)
         run: ./gradlew assembleRelease
+
+      - name: Resumen de errores
+        if: failure()
+        run: |
+          for f in build.log lint.log; do
+            [ -f "$f" ] || continue
+            echo "===== $f ====="
+            grep -nE "^e: |^w: .*error|error:|ERROR|What went wrong|> Task .* FAILED|FAILED$|Exception:|tests completed|Unresolved|There were failing tests" "$f" | grep -v "^\s*at " | head -250
+          done
+          for x in $(find . -path "*/build/test-results/*" -name "*.xml"); do
+            grep -l "<failure" "$x" >/dev/null 2>&1 && { echo "== $x"; grep -A3 "<failure" "$x" | head -15; }
+          done | head -150
 
       - name: Reportes
         if: always()
