@@ -13,13 +13,29 @@ jobs:
           mkdir w && cd w
           get() { curl -sfL "$G/$1" -o "$2"; }
           get com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.aar prompt.aar
-          get com/google/mlkit/genai-common/maven-metadata.xml gc.xml; grep -oE '<version>[^<]+' gc.xml | tail -3
+          get com/google/mlkit/genai-common/1.0.0-beta4/genai-common-1.0.0-beta4.aar common.aar
           get com/google/ai/edge/litert/litert/2.3.0/litert-2.3.0.aar litert.aar
+          get com/google/ai/edge/litert/litert-api/2.3.0/litert-api-2.3.0.aar litertapi.aar || true
+          curl -sfL "$G/com/google/ai/edge/litert/litert/2.3.0/litert-2.3.0.pom" | grep -B1 -A2 artifactId | head -30
           get com/android/billingclient/billing/9.1.0/billing-9.1.0.aar billing.aar
-          curl -sfL "$G/com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.pom" | grep -A3 artifactId | head -40
-          for a in prompt litert billing; do
+          for a in prompt common litert litertapi billing; do
+            [ -f $a.aar ] || continue
             mkdir $a && (cd $a && unzip -q ../$a.aar && unzip -q -o classes.jar -d cls 2>/dev/null)
-            echo "=== $a classes"; (cd $a/cls && find . -name '*.class' | grep -v '\$' | grep -viE 'internal|zz|/a/|/b/' | head -80)
           done
-          cd prompt/cls && for c in $(find . -name '*.class' | grep -v '\$' | grep -E 'genai/prompt/[A-Za-z]+\.class$'); do javap -cp . ${c%.class} | head -40; done
-          cd ../../litert/cls && for c in $(find . -name 'Interpreter.class' -o -name 'CompiledModel.class' -o -name 'TensorBuffer.class' | head -5); do javap -cp . ${c%.class} | head -60; done
+          jp() { (cd $1/cls && javap -cp . "$2" 2>&1 | head -${3:-50}); }
+          for c in GenerativeModel Generation GenerateContentResponse Candidate GenerateContentRequest GenerateContentRequestKt TextPart GenerationConfig; do jp prompt com.google.mlkit.genai.prompt.$c; done
+          (cd common/cls && find . -name '*.class' | grep -v '\$' | grep -viE '/zz' | head -30)
+          jp common com.google.mlkit.genai.common.FeatureStatus
+          jp common com.google.mlkit.genai.common.DownloadStatus 20
+          jp common com.google.mlkit.genai.common.GenAiException 20
+          jp litert org.tensorflow.lite.Interpreter 60
+          [ -d litertapi ] && (cd litertapi/cls && find . -name '*.class' | grep -v '\$' | head -30) && jp litertapi org.tensorflow.lite.InterpreterApi 60
+          jp billing com.android.billingclient.api.BillingClient 80
+          jp billing 'com.android.billingclient.api.BillingClient$Builder' 30
+          jp billing com.android.billingclient.api.PendingPurchasesParams 20
+          jp billing 'com.android.billingclient.api.PendingPurchasesParams$Builder' 20
+          jp billing com.android.billingclient.api.QueryProductDetailsResult 20
+          jp billing 'com.android.billingclient.api.QueryProductDetailsParams$Product$Builder' 20
+          jp billing 'com.android.billingclient.api.BillingFlowParams$ProductDetailsParams$Builder' 20
+          jp billing com.android.billingclient.api.ProductDetailsResponseListener 10
+          jp billing com.android.billingclient.api.ProductDetails 40
