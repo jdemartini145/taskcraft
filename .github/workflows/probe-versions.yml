@@ -1,4 +1,4 @@
-name: Probe versions
+name: Probe APIs
 on:
   workflow_dispatch:
   push:
@@ -7,19 +7,19 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Latest stable versions from Google Maven
+      - name: Inspect AAR APIs
         run: |
           G=https://dl.google.com/dl/android/maven2
-          for p in com/android/tools/build/gradle androidx/compose/material3/material3 androidx/compose/ui/ui com/google/mlkit/genai-prompt androidx/test/espresso/espresso-core androidx/compose/compose-bom androidx/room/room-runtime \
-            androidx/navigation/navigation-compose androidx/hilt/hilt-navigation-compose androidx/hilt/hilt-work androidx/hilt/hilt-compiler \
-            androidx/work/work-runtime-ktx androidx/datastore/datastore-preferences androidx/glance/glance-appwidget \
-            androidx/glance/glance-material3 androidx/activity/activity-compose androidx/lifecycle/lifecycle-runtime-compose \
-            androidx/core/core-ktx androidx/core/core-splashscreen androidx/camera/camera-camera2 com/google/ai/edge/litert/litert \
-            com/google/mlkit/genai-prompt androidx/compose/material3/adaptive/adaptive androidx/profileinstaller/profileinstaller \
-            com/android/billingclient/billing-ktx androidx/benchmark/benchmark-macro-junit4 androidx/baselineprofile/androidx.baselineprofile.gradle.plugin \
-            androidx/compose/material3/material3 androidx/test/ext/junit androidx/test/runner androidx/test/uiautomator/uiautomator \
-            androidx/compose/ui/ui-test-junit4 androidx/lifecycle/lifecycle-viewmodel-compose androidx/room/room-testing \
-            androidx/navigation/navigation-testing androidx/security/security-crypto com/android/tools/desugar_jdk_libs; do
-            echo "$p: $(curl -s $G/$p/maven-metadata.xml | grep -oE '<version>[^<]+' | sed 's/<version>//' | grep -vE 'alpha|beta|rc|dev' | tail -5 | tr '\n' ' ')"
+          mkdir w && cd w
+          get() { curl -sfL "$G/$1" -o "$2"; }
+          get com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.aar prompt.aar
+          get com/google/mlkit/genai-common/maven-metadata.xml gc.xml; grep -oE '<version>[^<]+' gc.xml | tail -3
+          get com/google/ai/edge/litert/litert/2.3.0/litert-2.3.0.aar litert.aar
+          get com/android/billingclient/billing/9.1.0/billing-9.1.0.aar billing.aar
+          curl -sfL "$G/com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.pom" | grep -A3 artifactId | head -40
+          for a in prompt litert billing; do
+            mkdir $a && (cd $a && unzip -q ../$a.aar && unzip -q -o classes.jar -d cls 2>/dev/null)
+            echo "=== $a classes"; (cd $a/cls && find . -name '*.class' | grep -v '\$' | grep -viE 'internal|zz|/a/|/b/' | head -80)
           done
-          echo "ANDROID_HOME=$ANDROID_HOME"; ls $ANDROID_HOME/platforms $ANDROID_HOME/build-tools || true
+          cd prompt/cls && for c in $(find . -name '*.class' | grep -v '\$' | grep -E 'genai/prompt/[A-Za-z]+\.class$'); do javap -cp . ${c%.class} | head -40; done
+          cd ../../litert/cls && for c in $(find . -name 'Interpreter.class' -o -name 'CompiledModel.class' -o -name 'TensorBuffer.class' | head -5); do javap -cp . ${c%.class} | head -60; done
